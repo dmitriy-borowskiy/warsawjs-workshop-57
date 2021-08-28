@@ -16,6 +16,8 @@ We'll cover the following topics:
 
 */
 
+let name = "Dima";
+
 export function IntroductionLesson() {
-  return <div>Hello World!</div>;
+  return <div>Hello {name}</div>;
 }

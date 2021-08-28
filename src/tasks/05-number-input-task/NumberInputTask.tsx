@@ -14,6 +14,17 @@ function add (a: number, b: number) {
 
 */
 
+import { useState } from "react";
+
 export function NumberInputTask() {
-  return <div>Task: Number Input</div>;
+  const [text, setText] = useState("0");
+
+  function checkNum(text: string) {
+    if (/^\d*$/.test(text)) {
+      setText(text);
+    }
+  }
+  return <div>Task: Number Input
+    <input value={text} onChange={(e) => checkNum(e.target.value)}></input>
+  </div>;
 }

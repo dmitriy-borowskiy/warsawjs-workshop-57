@@ -10,11 +10,17 @@ Create a component that presents some basic information about you.
 
 */
 
-const firstName = "???";
-const lastName = "???";
-const favoritePictureUrl = "???";
-const favoriteColor = "???";
+const firstName = "Dima";
+const lastName = "Borowski";
+const favoritePictureUrl = "https://pbs.twimg.com/media/DPy3_stW4AExs1G.jpg";
+const favoriteColor = "blue";
 
 export function AboutMeTask() {
-  return <div>Task: About Me</div>;
+  return <div style={{
+    backgroundColor: favoriteColor
+  }}>Task:
+    <p>First name: {firstName.toUpperCase()}</p>
+    <p>Last name: {lastName}</p>
+    <img src={favoritePictureUrl}></img>
+  </div>;
 }
