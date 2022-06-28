@@ -33,9 +33,9 @@ export function KeysLesson() {
       <ul>
         {items.map((person, index) => (
           <Person
-            key={index}
             name={person.name}
             occupation={person.occupation}
+            key={index}
           />
         ))}
       </ul>

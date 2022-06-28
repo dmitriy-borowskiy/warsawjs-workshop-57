@@ -11,6 +11,21 @@ After that create a component LimitedButtonNative that uses a native button.
 
 */
 
+import {LimitedButtonA} from "./LimitedButtonA";
+import { LimitedButtonB } from "./LimitedButtonB";
+import {LimitedButtonNative} from "./LimitedButtonNative";
+
 export function CustomButtonTask() {
-  return <div>Task: Custom Button</div>;
+  return (
+      <div>
+        Task: Custom Button
+          <LimitedButtonA maxClick={5} onClick={() => console.log("click!")} color={'red'} > Button A </LimitedButtonA>
+          <LimitedButtonB maxClick={2} onClick={() => console.log("click button B!")} > Button B </LimitedButtonB>
+          <LimitedButtonNative
+              onClick={() => console.log("Native!")}
+              maxClicks={2}
+          >
+              Button Native
+          </LimitedButtonNative>
+    </div>);
 }

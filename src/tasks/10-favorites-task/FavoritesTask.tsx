@@ -8,36 +8,27 @@ one.
 
 */
 
+import { EmojiRating } from "../10-favorites-task/EmojiRating";
+
 export function FavoritesTask() {
   return (
     <div style={{ maxWidth: 600 }}>
       <h1>Rate emojis!</h1>
       <ul>
         <li>
-          <span>🦊 - Fox </span>
-          <button>🙂</button>
-          <button>😀</button>
-          <button>😍</button>
+          <EmojiRating emoji="🦊" name='Fox' />
         </li>
         <li>
-          <span>🦍 - Gorilla </span>
-          <button>🙂</button>
-          <button>😀</button>
-          <button>😍</button>
+          <EmojiRating emoji="🦍" name='Gorilla' />
         </li>
         <li>
-          <span>🐈 - Cat </span>
-          <span>😍</span>
+          <EmojiRating emoji="🐈" name='Cat' />
         </li>
         <li>
-          <span>🐕 - Dog </span>
-          <button>🙂</button>
-          <button>😀</button>
-          <button>😍</button>
+          <EmojiRating emoji="🐕" name='Dog' />
         </li>
         <li>
-          <span>🐘 - Elephant </span>
-          <span>😀</span>
+          <EmojiRating emoji="🐘" name='Elephant' />
         </li>
       </ul>
     </div>

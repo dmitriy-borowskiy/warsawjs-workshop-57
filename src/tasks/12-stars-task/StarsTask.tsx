@@ -17,6 +17,7 @@ The type for a function is (value: number) => void
 */
 
 import { useState } from "react";
+import { Rating } from "./Rating";
 
 export function StarsTask() {
   const [rating, setRating] = useState(0);
@@ -26,7 +27,7 @@ export function StarsTask() {
       <h1>Rate the cookie 🍪</h1>
       <p>
         <span>Please rate the cookie </span>
-        {/* <Rating value={rating} onChange={setRating} /> */}
+        {<Rating value={rating} onChange={setRating} />}
       </p>
       <p>Your rating is: {rating}</p>
     </div>

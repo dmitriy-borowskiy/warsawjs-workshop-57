@@ -47,5 +47,16 @@ const employees = [
 ];
 
 export function EmployeesTask() {
-  return <div>Task: Employees</div>;
+  return (
+    <ul>
+      {employees.map((emp, i) => (
+        <li key={i}>
+          <div>
+            {emp.isManager && "[Manager]"}
+            {emp.firstName} {emp.lastName}
+          </div>
+          <div>{emp.salary}</div>
+        </li>
+      ))}
+    </ul>);
 }
